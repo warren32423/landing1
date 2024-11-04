@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Eating Healthier</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Condensed:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+
+  <div class="container">
+      <div class="banner">
+        <h1>Eat Healthier</h1>
+        <h2>Let's make your meals way better for you with our help</h2>
+      </div>
+        <h2>Avatar</h2>
+        <img class="avatar" src="images/olol.jpg" alt="WC picture">
+        <h2>Card</h2>
+        <div class="container">
+          <h2>Smoothies recipes</h2>
+          <div class="card">
+            <img src="images/Untitled.jpg" alt="smoothie">
+            <h3>Berries Smoothie</h3>
+            <a href="#" class="btn-blue">Make a Smoothie</a>
+          </div>
+         
+          <div class="card">
+            <img src="images/banana.jpg" alt="smoothie">
+            <h3>Banana Smoothie</h3>
+            <a href="#" class="btn-blue">Make a Smoothie</a>
+          </div>
+
+          
+        
+      </div>
+        
+
+        <h2>Recipe Generator</h2>
+        <p>Personalize your diet:</p>
+        <input type="text" id="diet" placeholder="Diet (e.g., Vegan)">
+        <input type="text" id="allergies" placeholder="Allergies or dietary restrictions">
+        <select id="budget">
+            <option value="low">Budget: Low</option>
+            <option value="medium">Budget: Average</option>
+            <option value="high">Budget: High</option>
+        </select>
+
+        <br>
+        <center><a href="https://www.foodsafety.gov/" class="btn-blue">Learn more about food</a></center>
+        <br>
+    </div>
+
+    <div class="button-group">
+        <button onclick="generateMealPlan()">Get my meal plan</button>
+    </div>
+
+    <div class="meal-plan" id="mealPlanResult"></div>
+
+    <script>
+        function generateMealPlan() {
+            const diet = document.getElementById("diet").value;
+            const allergies = document.getElementById("allergies").value;
+            const budget = document.getElementById("budget").value;
+
+            let mealPlan;
+
+            if (diet.toLowerCase().includes("vegetarian") && budget === "low") {
+                mealPlan = "Monday: Quinoa salad with vegetables\nTuesday: Lentil soup\nWednesday: Pasta with roasted vegetables.";
+            } else if (diet.toLowerCase().includes("gluten") && budget === "medium") {
+                mealPlan = "Monday: Grilled chicken and vegetable rice\nTuesday: Gluten-free vegetable soup\nWednesday: Tuna salad with fresh vegetables.";
+            } else {
+                mealPlan = "Sorry, no perfect match found. Here is a general suggestion:\nMonday: Salad\nTuesday: Pasta\nWednesday: Soup";
+            }
+
+            document.getElementById("mealPlanResult").textContent = mealPlan;
+          }
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.btn-blue {
+    display: inline-block;
+    background-color: #99c1b9;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #f2d0a9;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-blue:hover {
+    background-color: #88b3a5;
+}
+.button-group {
+    text-align: center; 
+    margin: 20px 0; 
+}
+.button-group button {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button-group button:hover {
+    background-color: #0056b3; 
+}
+.meal-plan {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e7f3fe;
+    border-left: 6px solid #007BFF;
